@@ -1,4 +1,4 @@
-﻿/*
+/*
  Copyright 2013-2014 appPlant UG
 
  Licensed to the Apache Software Foundation (ASF) under one
@@ -291,10 +291,13 @@
     {
         return [self dataForAsset:path];
     }
+
+/**
     else if ([path hasPrefix:@"base64:"])
     {
         return [self dataFromBase64:path];
     }
+*/
 
     NSFileManager* fileManager = [NSFileManager defaultManager];
 
@@ -402,7 +405,7 @@
  *
  * @return
  *      The data for the attachment
- */
+
 - (NSData*) dataFromBase64:(NSString*)base64String
 {
     NSUInteger length = [base64String length];
@@ -422,6 +425,7 @@
 
     return data;
 }
+*/
 
 #pragma mark -
 #pragma mark Plugin helper methods
